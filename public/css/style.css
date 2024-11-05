@@ -1,0 +1,115 @@
+/*Version Desktop*/
+/*******************************
+CSS COMMUN
+*******************************/
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+
+html {
+    font-size: 62.5%;
+    
+}
+
+body {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif; 
+    font-size: 1.6em;
+    line-height: 1.6; 
+    
+}
+
+/*on défini notre classe container en mode desktop*/
+#container {
+    max-width: 1060px;
+    margin: 0 auto;
+}
+
+
+.d-flex {
+    display: flex;
+    flex-wrap: wrap; /* on force le retour des items s'ils ont une dimension qui ne leur permet pas de rester en ligne */
+    
+
+  
+    flex-direction:row;
+    justify-content: flex-start;
+    align-items: stretch;
+
+}
+
+
+.btn { /*classe d'un habillage "bouton"*/
+    background: rgb(124, 40, 99);
+    color: white;
+    display: inline-block;
+    font-size: 1.5rem;
+    padding: 8px 15px;
+    text-decoration: none;
+}
+
+.btn:hover { 
+    background: rgba(124, 40, 99, .7);
+}
+
+
+/*******************************
+CSS HEADER
+*******************************/
+header { /* je mets  un dégradé  transparence sur l'image de fond*/
+    background-image: linear-gradient(to top right, rgba(124, 40, 99, 0.4) 20%, rgba(0, 0, 0, 0.4)), url('../images/imagewelcom2.jpg');
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    color: white;
+    padding: 20px 30px 10px;
+}
+
+header .menu { /* on vise la balise qui contient le logo et la nav et que cette balise est un conteneur flex via la class d-flex */
+    align-items: center; /* agit sur l'axe vertical par défaut */
+    justify-content: space-between; /* agit sur l'axe horizontal par défaut */
+}
+
+header .menu img {
+    max-width: 50px; /* permet de fixer la largeur maxi de l'image */
+    width: auto; /* sinon elle s'adapte */
+    height: 10%;
+}
+
+header .menu input {
+    visibility: hidden; /* cache l'input. Il faudra le rendre visible au moment où on l'utilisera */
+}
+
+header .menu nav {
+    align-items: center;
+}
+
+
+
+header h1,
+header h2 { /* on ne vise que les h1 et h2 du header et pas les autres titres */
+    text-align: center;
+}
+
+header .header-title {
+    padding: 100px 0 200px; /* c'est ça qui donne du volume à notre header */
+}
+
+header h1 {
+    font-size: 8rem;
+    font-style: italic;
+    font-weight: 900;
+    line-height: 5rem;
+    margin-bottom: 20px;
+}
+
+header h1 span {
+    color: red; /* Met le F en rouge  */
+}
+
+header h2 {
+    font-size: 2rem;
+    font-weight: 700;
+}
