@@ -1,4 +1,5 @@
 /*Version Desktop*/
+/*Version Desktop*/
 /*******************************
 CSS COMMUN
 *******************************/
@@ -7,36 +8,40 @@ CSS COMMUN
     outline: none;
 }
 
-
+/*
+    Permet de passer en base 10 pour simplifier les conversions px->rem | rem->px (px->em | em->px) 1rem = 10px au lieu de 16px.
+    Comme il y avait des valeur de taille de police en pixels, il fallait penser Ã  le faire pour Ã©viter de diviser par 16 pour convertir les px --> rem
+*/
 html {
     font-size: 62.5%;
     
 }
 
 body {
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif; 
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif; /* Font par dÃ©faut */
     font-size: 1.6em;
-    line-height: 1.6; 
+    line-height: 1.6; /*attention, ici pas d'unitÃ©. C'est un coef*/
     
 }
 
-/*on défini notre classe container en mode desktop*/
-#container {
+/*on dÃ©fini notre classe container en mode desktop*/
+.container {
     max-width: 1060px;
     margin: 0 auto;
 }
 
-
+/*Classe de base pour tous les conteneurs flex*/
 .d-flex {
     display: flex;
     flex-wrap: wrap; /* on force le retour des items s'ils ont une dimension qui ne leur permet pas de rester en ligne */
     
 
-  
-    flex-direction:row;
-    justify-content: flex-start;
-    align-items: stretch;
-
+    /*
+        Rapellez-vous que les propriÃ©tÃ©s suivantes sont appliquÃ©es avec les valeurs suivantes par dÃ©fauts :
+        flex-direction:row;
+        justify-content: flex-start;
+        align-items: stretch;
+    */
 }
 
 
@@ -49,7 +54,7 @@ body {
     text-decoration: none;
 }
 
-.btn:hover { 
+.btn:hover { /*Le bg-color de l'habillage "bouton" change au survole de la souris*/
     background: rgba(124, 40, 99, .7);
 }
 
@@ -57,33 +62,37 @@ body {
 /*******************************
 CSS HEADER
 *******************************/
-header { /* je mets  un dégradé  transparence sur l'image de fond*/
+header { /*on applique un dÃ©gradÃ© avec transparence sur l'image de fond*/
     background-image: linear-gradient(to top right, rgba(124, 40, 99, 0.4) 20%, rgba(0, 0, 0, 0.4)), url('../images/imagewelcom2.jpg');
     background-position: top;
     background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed; 
+    background-attachment: fixed; /* On fixe l'image de fond pour faire un effet paralaxe simple */
     color: white;
     padding: 20px 30px 10px;
 }
 
 header .menu { /* on vise la balise qui contient le logo et la nav et que cette balise est un conteneur flex via la class d-flex */
-    align-items: center; /* agit sur l'axe vertical par défaut */
-    justify-content: space-between; /* agit sur l'axe horizontal par défaut */
+    align-items: center; /* agit sur l'axe vertical par dÃ©faut */
+    justify-content: space-between; /* agit sur l'axe horizontal par dÃ©faut */
 }
 
 header .menu img {
     max-width: 50px; /* permet de fixer la largeur maxi de l'image */
     width: auto; /* sinon elle s'adapte */
-    height: 10%;
 }
 
 header .menu input {
-    visibility: hidden; /* cache l'input. Il faudra le rendre visible au moment où on l'utilisera */
+    visibility: hidden; /* cache l'input. Il faudra le rendre visible au moment oÃ¹ on l'utilisera */
 }
 
 header .menu nav {
     align-items: center;
+}
+
+header .menu nav a {
+    margin-left: 30px;
+    color: white;
+    text-decoration: none;
 }
 
 
@@ -94,7 +103,7 @@ header h2 { /* on ne vise que les h1 et h2 du header et pas les autres titres */
 }
 
 header .header-title {
-    padding: 100px 0 200px; /* c'est ça qui donne du volume à notre header */
+    padding: 100px 0 200px; /* c'est Ã§a qui donne du volume Ã  notre header */
 }
 
 header h1 {
@@ -113,3 +122,83 @@ header h2 {
     font-size: 2rem;
     font-weight: 700;
 }
+
+
+/*******************************
+CSS main
+*******************************/
+/*---------------A propos-section--------------*/
+#about-me-section{
+    min-height: 100vh;
+    
+}
+
+/* #about-me-section .containe .card{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+}
+ */
+
+#about-me-section .card{
+    border: .5px solid black;
+    box-shadow: 0px 0px 10px #666;
+    border-radius: 10px;
+    margin: 0px 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+}
+
+#about-me-section .img-div{
+    min-width: 50px;
+    min-height: 50px;
+    border-radius: 10px;
+}
+
+#about-me-section img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+    padding-right:10px;
+}
+
+/*---------------Réalisation projetc--------------*/
+
+/* TroisiÃ¨me tranche (<div id="liste">) */
+#liste {
+    margin-bottom: 0;
+}
+
+#liste article {
+    flex-basis: calc(100%/3); /* applique une largeur de 33.333% sur chaque item */
+    padding: 60px 50px;
+    text-align: center;
+
+    /*
+        NOTE :
+        Nous avons ici 6 items. Pourtant on se retrouve avec 2 lignes de 3 items.
+        C'est normal, rappelez-vous que le conteneur flex (la <div class="d-flex">)
+        a la propriÃ©tÃ© flex-wrap:wrap; qui force le retour des items Ã  la ligne s'ils
+        n'ont pas de place.
+    */
+}
+
+#liste article:nth-of-type(odd) { /* on applique une couleur de fond sur tous les articles impairs */
+    background: rgba(224, 224, 224, 0.4)
+}
+
+#liste article img {
+    width: 48px;
+}
+
+/* SixiÃ¨me tranche (<div id="map">) */
+#map iframe {
+    border: 0;
+    display: block; /* supprime la marge blanche du bas qui est appliquÃ©e par la maps de google */
+    height: 450px;
+    width: 100%;
+}
+
+
+
+

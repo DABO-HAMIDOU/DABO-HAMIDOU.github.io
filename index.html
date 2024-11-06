@@ -1,69 +1,168 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>portefolio</title>
-    
+
     <!--Google fonts-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <!--lien boostrap-->
 
     <!-- Fontawesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
     <!--Normalize-->
     <link rel="stylesheet" href="assets/css/normalize.css">
 
-    <!-- <link rel="stylesheet" href="assets/css/zoning.css"> -->
 
     <link rel="stylesheet" href="public/css/style.css">
 </head>
+
 <body>
     <header>
         <div class="menu d-flex"> <!--Conteneur Flex-->
             <a href="">
                 <img src="public/images/hacker-5485843_1280.webp" alt="Logo-portefo">
             </a> <!--item-->
-    
+
             <nav class="d-flex"> <!--item--> <!--Conteneur Flex-->
-                <a href="#">A propos</a> <!--item-->
-                <a href="#">projet</a> <!--item-->
-                <a class="btn" href="">Contact</a> <!--item-->
+                <a href="#about-me-section">A propos</a> <!--item-->
+                <a href="#projet">projet</a> <!--item-->
+                <a href="#contact-section">contact</a><!--item-->
+
             </nav>
         </div>
-    
+
         <div class="header-title">
-            <h1><span><button type="button" class="btn"></button>telecharher cv </span></h1>
+            <h1><span><button type="button" class="btn"></button>okok</span></h1>
             <h2>Mon portefolio</h2>
+            <section id="welcome-section">
+                <div>
+                  <h1>Decouvrir Mon univers Informatique</h1>
+                  <p>JUST CODE IT!</p>
+                </div>
+              </section>
+          
         </div>
     </header>
     <main>
-        <section id="A propos">
-            <div class="container">
-                <h2>ma page A propos</h2>
+        <!--item--> <!--ma section a propos-->
+        <section id="about-me-section">
+            <h2>About Me</h2>
+
+            <div class="card">
+                <div class="img-div">
+                    <img src="public/images/imprint-418594_1280.jpg" alt="" />
+                </div>
+                <div class="text-div">
+                    <p>
+                        Suite à des formations dans le domaine du Web et une expérience significative dans
+                        le secteur de la restauration, je cherche à optimiser ses connaissances et en acquérir
+                        de nouvelles en tant que Développeur junior pour un nouveau défis !
+                    </p>
+                    <p>
+                        Suite à des formations dans le domaine du Web et une expérience significative dans
+                        le secteur de la restauration, je cherche à optimiser ses connaissances et en acquérir
+                        de nouvelles en tant que Développeur junior pour un nouveau défis !
+                    </p>
+                    <p>
+                        Suite à des formations dans le domaine du Web et une expérience significative dans
+                        le secteur de la restauration, je cherche à optimiser ses connaissances et en acquérir
+                        de nouvelles en tant que Développeur junior pour un nouveau défis !
+                    </p>
+                    <p>Hamidou.</p>
+                </div>
+            </div>
             </div>
         </section>
+
+        <!--item--> <!--ma section projet(Réalisation)-->
         <section id="projet">
-            <div class="container">
-                <h2>ma page de Realisation</h2>
+            <div id="liste">
+                <div class="d-flex"><!--Conteneur flex-->
+                    <article> <!--item-->
+                        <img src="" alt="image-ridec-photo">
+                        <h3>Depuis 01/ 2023 Developpeur web benevole CZ RIDEC Malakoff (PARIS)</h3>
+                        <ul>
+                            <li>Gestion complète du site internet de l’association sur WordPress.</li>
+                            <li>Optimisation au référencement SEO ET SEA.</li>
+                            <li>Optimisation au référencement SEO ET SEA.</li>
+                            <li>La Personnalisation des thèmes WordPress.</li>
+                            <li>Traitement des images sur GIMPet Intégration du contenu Multimédia du site.</li> 
+                            
+                        </ul>
+                    </article>
+                    <article> <!--item-->
+                        <img src="public/images/Site-web-Adaptel.png" alt="parcours_adaptel">
+                        <h3>De 05/ 2023 à 05/ 2024 Serveur Chez « Intérim Adaptél » 75015 Paris</h3>
+                        <p>
+                            <li>Extra direct Room Service chez « Grand Hôtel Intercontinental de Paris » &« L’Hôtel
+                                Du Collectionneur ».</li>
+                            <li>Gérer les encaissements et les décaissements du jour.</li>
+                            
+                        </p>
+                    </article>
+                    <article> <!--item-->
+                        <img src="assets/img/referee@2x.png" alt="">
+                        <h3>De 07/ 2019 à 04/ 2023 Serveur Chez « Octopus » la défense 92800 Puteaux</h3>
+                        <p>
+                            <ul>
+                                <li>Faire une présentation du menu et des suggestions du jour</li>
+                                <li>Assurer les commandes de produits et suivre les stocks.</li>
+                                <li>Gestion du planning du personnel sur Skello.</li>
+                                <li>Définir la politique commerciale de l’établissement: les menus, des formules,tarifs et horaires.</li>
+                            </ul>
 
 
+                        </p>
+                    </article>
+                    <article> <!--item-->
+                        <img src="assets/img/resistance-band@2x.png" alt="">
+                        <h3>De 10/ 2016 à 12/ 2017 Stagiaire CBAO Dakar / Sénégal</h3>
+                        <p>
+                            <ul>
+                                <li>Échanges et conseils pour mieux comprendre les fonctions du métier</li>
+                                <li>Participation active aux réunions d'équipe et contribution aux projets.</li>
+                                <li>Aide à la rédaction de contenu pour les réseaux sociaux, des newsletters et autres supports de communication</li>
+
+                            </ul>
+                        </p>
+                    </article>
+                    <article> <!--item-->
+                        <img src="assets/img/boxing-glove@2x.png" alt="">
+                        <h3>2015/2016 Cours de Remise de niveaux aux nouveaux bacheliers</h3>
+                        <li>Aide sur les matieres scientifiques Mathématiques, Physique/Chimie, Informatique et Algorithmes.</li>
+                    </article>
+                    <article> <!--item-->
+                        <img src="assets/img/bath-tub@2x.png" alt="">
+                        <h3>De 2014/2013 LYCEE MAME Cheikh Mbaye Tambacounda</h3>
+                        <li>parcours secondaire lycée de lexcellence Mame Cheikh Mbaye Tambacounda</li>
+                            
+                    </article>
+                </div>
             </div>
+
         </section>
-        <section id="Contact">
+
+        <!--item--> <!--ma section contact(pour me contacter)-->
+        <section id="contact-section">
             <div class="container">
-                <h2>ma de contact</h2>
+                <h2>Contact.us</h2>
 
             </div>
         </section>
 
     </main>
+    <footer>
+        <section id="footer-section">
 
-
-
-
-
+        </section>
+    </footer>
 
 </body>
+
 </html>
