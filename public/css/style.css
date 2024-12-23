@@ -199,6 +199,22 @@ CSS main
     width: 100%;
 }
 
+/*-----------------------************css contact **************************---------------*/
+
+
+#contact-section{
+   
+  
+    background: linear-gradient(45deg, #4B4975, #d4d4d4 70%,  #E6B331); 
+
+}
+
+.sumbit{
+    margin-top: -40px;
+}
+
+
+
 
 
 
