@@ -27,21 +27,32 @@ body {
     padding: 50px 0;
 }
 
-/* Animations */
+/* Styles généraux du bouton */
 .animate-btn {
-    background: #ff5733;
-    color: #fff;
-    border: none;
+    background: rgba(255, 87, 51, 0.3); /* Fond transparent */
+    color: #fff; 
     padding: 15px 30px;
     font-size: 1.5rem;
     border-radius: 5px;
     cursor: pointer;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    outline: none;
+    transition: transform 0.6s ease, box-shadow 0.3s ease, background-color 0.3s ease, opacity 0.3s ease;
+    perspective: 1000px; /* Pour l'effet 3D */
+    opacity: 0.7; /* Opacité initiale */
 }
 
+/* Effet de rotation, opacité et survol */
 .animate-btn:hover {
-    transform: scale(1.1);
-    background-color: #ff8c42;
+    transform: rotateY(180deg); /* Rotation sur l'axe Y */
+    background-color: rgba(255, 87, 51, 0.5); /* Fond légèrement plus opaque */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Ombre portée */
+    opacity: 1; /* Devenir totalement opaque au survol */
+}
+
+/* Optionnel : un effet lorsque le bouton est en focus */
+.animate-btn:focus {
+    outline: none;
+    box-shadow: 0px 0px 15px rgba(255, 87, 51, 0.7);
 }
 
 .animate-subtitle {
@@ -187,6 +198,33 @@ header h2 {
     font-size: 2rem;
     font-weight: 700;
 }
+/* Appliquer la police Poppins et ajouter un style moderne */
+.custom-title {
+    font-family: 'Poppins', sans-serif;  /* Utilisation de la police Google Fonts */
+    font-weight: 600;  /* Poids de la police pour donner un aspect plus moderne */
+    font-size: 2.5rem;  /* Taille du texte */
+    letter-spacing: 1px;  /* Espacement entre les lettres pour plus de lisibilité */
+    color: #333;  /* Couleur sombre et élégante */
+    text-transform: uppercase;  /* Mettre le texte en majuscules pour un effet impactant */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);  /* Ombre légère pour un effet de profondeur */
+    padding-top: 30px;  /* Un peu d'espace au-dessus pour aérer */
+    margin-bottom: 30px;  /* Espacement en bas pour séparer du contenu suivant */
+}
+
+/* Optionnel: Ajouter une animation d'apparition pour un effet dynamique */
+.custom-title {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 
 /*******************************
 CSS MAIN
