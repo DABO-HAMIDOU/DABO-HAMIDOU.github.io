@@ -27,16 +27,23 @@
 <body>
     <header>
         <div class="menu d-flex"> <!--Conteneur Flex-->
-            <a href="">
-                <img src="public/images/hacker-5485843_1280.webp" alt="Logo-portefo">
-            </a> <!--item-->
-
-            <nav class="d-flex"> <!--item--> <!--Conteneur Flex-->
+            
+            <div class="logo">
+                <a href="#" id="Logo" class="logo-container"></a>
+                <span class="line">Dabo-Dev</span>
+                <span class="line">full-stack</span>
+                <span class="line">Symfony</span>  
+                </a>
+            </div>
+    
+            <div>
+                <nav class="d-flex"> <!--item--> <!--Conteneur Flex-->
                 <a href="#about-me-section">A propos</a> <!--item-->
                 <a href="#projet">projet</a> <!--item-->
                 <a href="#contact-section">contact</a><!--item-->
-
-            </nav>
+                </nav>
+            </div>
+            
         </div>
 
         <div class="header-title">
@@ -55,11 +62,28 @@
 
     </header>
     <main>
-        <!--item--> <!--ma section a propos-->
- <section id="projet">
-    <!-- <h2 class="text-center">Expériences Professionnelles</h2> -->
-    <h2 class="text-center custom-title">Expériences Professionnelles</h2>
+   <!--item--> <!--ma section a propos-->
+        <section id="about-me-section">
+            <h2 class="text-center mt-2" >A Propos</h2>
 
+            <div class="card">
+                <div class="img-div ">
+                    <img src="public/images/dabo-welcom.jpg" alt="" />
+                </div>
+                <div class="text-div text-start ps-4">
+                    <p>
+                      Après plusieurs années d'expérience dans le secteur de la restauration, où j'ai affiné mon sens du service et ma capacité d'adaptation, j'ai pris la décision de me réorienter vers le développement web. Suite à une formation intensive en développement web full-stack au sein d’un bootcamp parisien,
+                        je suis désormais passionné par la création de sites et d'applications web modernes. 
+                        Actuellement à la recherche d’un stage, je souhaite approfondir mes compétences                         techniques tout en contribuant activement à des projets novateurs, afin de continuer à évoluer dans ce domaine dynamique et en constante évolution.
+                    </p>
+                        <p class="text-center"><strong>Hamidou Dabo</strong></p>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <section id="projet">
+    <h2 class="text-center custom-title">Expériences Professionnelles</h2>
     <div id="liste">
         <!-- Article 1 -->
         <article>
@@ -87,7 +111,9 @@
             </ul>
         </article>
          <article> <!--item-->
-                        <img src="" alt="image-ridec-photo">
+                        <div class="img-placeholder">
+                            <img src="public/images/Site-web-Adaptel.png" alt="Parcours Adaptel" onerror="this.style.display='none'">
+                        </div>
                         <h3>Depuis 01/ 2023 Developpeur web benevole CZ RIDEC Malakoff (PARIS)</h3>
                         <ul>
                             <li>Gestion complète du site internet de l’association sur WordPress.</li>
@@ -110,7 +136,7 @@
                     </article>
         <!-- Ajoutez d'autres articles ici -->
     </div>
-</section>
+        </section>
 
         <!--item--> <!--ma section projet(Réalisation)-->
         <section id="projet">
@@ -159,13 +185,6 @@
             </div>
 
         </section>
-
-        <!--item--> <!--ma section contact(pour me contacter)-->
-        <!-- <section id="contact-section">
-            <div class="container">
-                <h2>Contact.us</h2>
-
-            </div> -->
 
         <section id="contact-section" class="py-5">
              <h2 class="text-center custom-title">Contact</h2>
@@ -224,16 +243,20 @@
                 </div>
             </div>
         </section>
-
+        <section id="map-div">
+           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2623.9718451151407!2d2.399650275135072!3d48.877813271334816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66da3541d3fdb%3A0x24822fc4f89f6dbd!2sH%C3%B4pital%20Robert%20Debr%C3%A9%20AP-HP!5e0!3m2!1sfr!2sfr!4v1734999085467!5m2!1sfr!2sfr" width="95%"
+            height="450"
+           style="border:0;" 
+           allowfullscreen="" 
+           loading="lazy" 
+           referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
         </section>
-
     </main>
-    <footer>
-        <section id="footer-section">
-
-        </section>
+  
+      <footer>
+        <p>Copyright &#x00A9; 2024, Hamidou dabo.</p>
     </footer>
-
 </body>
 
 </html>
