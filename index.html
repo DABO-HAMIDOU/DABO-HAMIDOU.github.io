@@ -32,8 +32,8 @@
 
 <body>
     <header>
-        <div class="menu d-flex"> <!--Conteneur Flex-->
-            
+    <nav>
+        <div class="menu d-flex"> <!--Conteneur Flex--> 
             <div class="logo">
                 <a href="#" id="Logo" class="logo-container"></a>
                 <span class="line">Dabo-Dev</span>
@@ -43,14 +43,17 @@
             </div>
     
             <div>
-                <nav class="d-flex"> <!--item--> <!--Conteneur Flex-->
-                <a href="#about-me-section">A propos</a> <!--item-->
-                <a href="#projects-section">projets</a> <!--item-->
-                <a href="#contact-section">contact</a><!--item-->
-                </nav>
+                <div class="d-flex"> <!--item--> <!--Conteneur Flex-->
+                    <div class="nav_list text-white">
+                    <a href="#about-me-section" class="text-white">A propos</a> <!--item-->
+                    <a href="#projects-section" class="text-white">projets</a> <!--item-->
+                    <a href="#contact-section" class="text-white">contact</a><!--item-->
+                    </div>
+                </div>
             </div>
             
         </div>
+    </nav>
 
         <div class="header-title">
     <h1>
@@ -82,7 +85,7 @@
                         je suis désormais passionné par la création de sites et d'applications web modernes. 
                         Actuellement à la recherche d’un stage, je souhaite approfondir mes compétences                         techniques tout en contribuant activement à des projets novateurs, afin de continuer à évoluer dans ce domaine dynamique et en constante évolution.
                     </p>
-                        <p class="text-center"><strong>Belle Aventure</strong></p>
+                        <p class="text-center"><strong>Dabo Dev Full-stack</strong></p>
                 </div>
             </div>
             </div>
@@ -131,7 +134,7 @@
                     <img src="public/images/octopus.jpg" class="card-img-top" alt="Projet 3">
                     <div class="card-body">
                         <h5 class="card-title">Projet 3</h5>
-                        <a href="http://naturalia.sc1reni9124.universe.wf/">Site developpeur full-stack La passerelle</a>
+                        <a href="http://naturalia.sc1reni9124.universe.wf/">Visitez mon site E-commerce</a>
                         <p class="card-text">Naturalia est un site web de e-commerce développé dans le cadre d’un projet de groupe.</p>
                         <a href="http://naturalia.sc1reni9124.universe.wf/" class="btn btn-outline-primary">Voir plus</a>
                     </div>
@@ -234,8 +237,7 @@
         </div>
       </div>
     </section>
-
-            <section id="contact-section" class="py-5">
+      <section id="contact-section" class="py-5">
              <h2 class="text-center custom-title">Contactez-moi</h2>
             <div class="container">
                 <div class="row">
@@ -246,11 +248,16 @@
 
                         <div class="adresse-div">
                             <address class="text-start"> 
-                            <p><i class="fa-regular fa-user"></i> : Dabo Hamidou</p>
-                            <p><i class="fa-solid fa-phone"></i> : 07 60 32 90 21</p>
-                            <p><i class="fa-brands fa-usps"></i> : 75019 Paris</p>
-
-                            <p><i class="fa-solid fa-square-envelope"></i> :  hamidoudabo12@gmail.com</p>
+                            <h2><i class="fa-regular fa-user"></i> : Dabo Hamidou</h2>
+                            <h2><i class="fa-solid fa-phone"></i> : 07 60 32 90 21</h2>
+                            <h2><i class="fa-brands fa-usps"></i> : 75019 Paris</h2>
+                            <h2><i class="fa-solid fa-square-envelope"></i> : hamidoudabo12@gmail.com</h2>
+                        <div class="icons-div">
+                            <a href="" class="fab fa-facebook-f"></a>
+                            <a href="" class="fab fa-twitter"></a>
+                            <a href="" class="fab fa-instagram"></a>
+                        </div>
+        </div>
                             </address>
                         </div>
                         
@@ -309,6 +316,17 @@
       <footer class="footer">
         <p class="fs-4">Copyright &#x00A9; 2025 Dabo Hamidou. Tous droits réservés.</p>
     </footer>
+
+
+      <script>
+      window.addEventListener("scroll", function () {
+        let nav = document.querySelector("nav");
+        let nav_list = document.querySelector(".nav_list");
+        let position_nav = window.scrollY > 100;
+
+        nav.classList.toggle("nav-scrolling-active", position_nav);
+      });
+    </script>
 </body>
 
 </html>
