@@ -1,9 +1,16 @@
 /* **************  CSS COMMUN *************** */
 
 
+html{
+    font-size: 62.5%; /*Permet de passer en base 10 pour simplifier les conversions px->rem | rem->px (px->em | em->px) 1rem = 10px au lieu de 16px*/
+}
+
+
 * {
+
   margin: 0;
   padding: 0;
+  outline: none;
   list-style-type: none;
   text-decoration: none;
   box-sizing: border-box;
@@ -56,13 +63,15 @@
 
 
 body {
-    font-family: Arial, sans-serif;
+   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
     /* background: linear-gradient(to right, #1f4037, #99f2c8); */
     color: #fff;
     text-align: center;
     overflow-x: hidden;
+    font-size: 1.6em;
+    line-height: 1.6;
 }
 
 .header-title h1 {
@@ -308,7 +317,6 @@ CSS MAIN
 
 #about-m-section img 
 
-
 /* Section: About Me */
 #about-me-section {
     min-height: 100vh;
@@ -465,14 +473,95 @@ ul li::before {
 }
 /*******************************
 CSS CONTACT
-*******************************/
-#contact-section {
-    background: linear-gradient(45deg, #4B4975, #d4d4d4 70%, #E6B331);
+.col-left {
+    font-size: 1.3rem;
+    text-align: right;
 }
 
-.sumbit {
-    margin-top: -40px;
+footer .col-left img {
+    max-width: 60px;
+    width: auto;
 }
+
+footer .col-left #rs a {
+    color: #fff;
+    font-size: 1.8rem;
+    letter-spacing: 5px;
+    text-decoration: none;
+}
+
+/*formulaire*/
+ form {
+    background: white;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
+    margin: -120px 20px 0;
+    padding: 30px 70px;
+    text-align: center;
+    width: calc((100% / 2) - 40px);
+    z-index: 100;
+}
+
+ form h3 {
+    text-transform: uppercase;
+}
+
+ form p {
+    font-size: 1.3rem;
+}
+
+ form input {
+    border: none;
+    border-bottom: 1px solid black;
+    color: black;
+    margin: 30px auto;
+    padding: 5px;
+    width: 100%;
+}
+
+ form input::placeholder { /*on habille le texte injecté par l'attribut placeholder*/
+    color: black;
+    font-size: 1.2rem;
+}
+
+ form button {
+    background: rgb(124, 40, 99);
+    border: none;
+    color: white;
+    margin-top: 30px;
+    padding: 20px;
+}
+
+ .col-left, footer .col-right {
+    color: white;
+    flex-basis: calc((100% / 4));
+    margin-top: 20px;
+}
+
+ li div {
+    margin-left: 10px;
+}
+
+ .col-right i {
+    color: rgb(124, 40, 99);
+}
+
+ .col-right h3 {
+    margin-top: 0;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+ .col-right ul li p,
+ .col-right ul li ul {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+ .col-right a{
+    color: white;
+    text-decoration: none;
+}
+*******************************/
 
 /*******************************
 CSS EXPÉRIENCES PROFESSIONNELLES
@@ -564,12 +653,106 @@ CSS EXPÉRIENCES PROFESSIONNELLES
   width: 100%;
   height: 100%;
 }
-
+/*******************************
+CSS FOOTER
+*******************************/
 footer {
-  text-align: center;
-  color: white;
-  padding: 1.1rem;
+    background: #000;
+    border-top: 10px solid rgb(124, 40, 99);
+    padding-bottom: 50px;
 }
+
+/*articles à gauche*/
+footer .col-left {
+    font-size: 1.3rem;
+    text-align: right;
+}
+
+footer .col-left img {
+    max-width: 60px;
+    width: auto;
+}
+
+footer .col-left #rs a {
+    color: #fff;
+    font-size: 1.8rem;
+    letter-spacing: 5px;
+    text-decoration: none;
+}
+
+/*formulaire*/
+footer form {
+    background: white;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
+    margin: -120px 20px 0;
+    padding: 30px 70px;
+    text-align: center;
+    width: calc((100% / 2) - 40px);
+    z-index: 100;
+}
+
+footer form h3 {
+    text-transform: uppercase;
+}
+
+footer form p {
+    font-size: 1.3rem;
+}
+
+footer form input {
+    border: none;
+    border-bottom: 1px solid black;
+    color: black;
+    margin: 30px auto;
+    padding: 5px;
+    width: 100%;
+}
+
+footer form input::placeholder { /*on habille le texte injecté par l'attribut placeholder*/
+    color: black;
+    font-size: 1.2rem;
+}
+
+footer form button {
+    background: rgb(124, 40, 99);
+    border: none;
+    color: white;
+    margin-top: 30px;
+    padding: 20px;
+}
+
+footer .col-left, footer .col-right {
+    color: white;
+    flex-basis: calc((100% / 4));
+    margin-top: 20px;
+}
+
+footer li div {
+    margin-left: 10px;
+}
+
+footer .col-right i {
+    color: rgb(124, 40, 99);
+}
+
+footer .col-right h3 {
+    margin-top: 0;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+footer .col-right ul li p,
+footer .col-right ul li ul {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+footer .col-right a{
+    color: white;
+    text-decoration: none;
+}
+
+
 
 .custom-text-size {
     font-size: 1.6rem; /* Ajustez selon vos besoins */
@@ -607,14 +790,36 @@ body {
 }
 
 .blinking-gradient {
-    font-size: 5rem;
+    font-size: 4rem;
     font-weight: bold;
     text-transform: uppercase;
-    background: linear-gradient(to right, #00ffd9, #ffa500, #ff4500);
-    background-size: 200% 100%;
+    background: linear-gradient(90deg, #6ea3ff, #7773f57e, #1fd1f9, #8b8fff);
+    background-size: 200%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: gradientBlink 2.5s infinite ease-in-out;
+    animation: color-shift 2.5s infinite, blink-scale 1.5s infinite ease-in-out;
+}
+/* Animation pour les couleurs dynamiques */
+@keyframes color-shift {
+    0% {
+        background-position: 0%;
+    }
+    50% {
+        background-position: 100%;
+    }
+    100% {
+        background-position: 0%;
+    }
+}
+
+/* Animation pour le clignotement */
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
 }
 
 
@@ -734,6 +939,35 @@ footer {
     font-size: 0.9rem;
     color: #666;
 }
+
+
+
+#liste {
+    margin-bottom: 0; 
+}
+
+#liste article {
+    flex-basis: calc(100%/3); /*applique une largeur de 33.333% sur chaque item*/
+    padding: 60px 50px;
+    text-align: center;
+
+    /*
+        NOTE :
+        Nous avons ici 6 items. Pourtant on se retrouve avec 2 lignes de 3 items.
+        C'est normal, rappelez-vous que le conteneur flex (la <div class="d-flex">)
+        a la propriété flex-wrap:wrap; qui force le retour des items à la ligne s'ils
+        n'ont pas de place.
+    */
+}
+
+#liste article:nth-of-type(odd) { /*on applique une couleur de fond sur tous les articles impairs*/
+    background: rgba(224, 224, 224, 0.4) 
+}
+
+#liste article img {
+    width: 48px;
+}
+
 
 
 
